@@ -1,0 +1,17 @@
+{
+	"name": "emoji-cron",
+	"version": "0.0.0",
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20250214.0",
+		"typescript": "^5.7.3",
+		"vitest": "^3.0.6",
+		"wrangler": "3.109.1"
+	},
+	"private": true,
+	"scripts": {
+		"start": "wrangler dev --test-scheduled",
+		"deploy": "wrangler deploy",
+		"test": "vitest",
+		"trigger": "curl \"http://localhost:8787/__scheduled\""
+	}
+}

@@ -1,0 +1,13 @@
+name = "emoji-cron"
+main = "src/index.ts"
+compatibility_date = "2025-02-18"
+
+[triggers]
+crons = [ "0 0 * * 1" ] # every Monday
+
+# wrangler.toml (wrangler v3.88.0^)
+[observability.logs]
+enabled = true
+
+[vars]
+API_ENDPOINT = "https://emoji-otd.pages.dev/api/emojis/random"
